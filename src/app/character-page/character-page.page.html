@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Character</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="characterlist">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeMd="4" offsetMd="4">
+        <div *ngIf="characterData">
+          <ion-card>
+            <ion-card-content>
+              <img src="{{characterData.image}}" alt="">
+              <ion-card-title>{{characterData.name}}</ion-card-title>
+              <p>
+                {{characterData.status}}
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
