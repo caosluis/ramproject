@@ -14,11 +14,8 @@ export class CharacterlistPage implements OnInit {
 
   ngOnInit() {
     this.http.get<any>(`https://rickandmortyapi.com/api/character`).subscribe(res => {
-      this.characterList = res.results
-      console.log(this.characterList);
-      
-    }
-    )
+      this.characterList = res.results      
+    })
   }
 
 }

@@ -17,7 +17,6 @@ export class CharacterPagePage implements OnInit {
     this.characterId = this.activatedroute.snapshot.paramMap.get('id')
     this.httpclient.get<any>(`https://rickandmortyapi.com/api/character/${this.characterId}`).subscribe(res => {
       this.characterData = res;
-
     })
   }
 
